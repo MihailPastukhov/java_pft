@@ -6,22 +6,26 @@ public class MyFirstProgram {
 
         System.out.println("Hello, world!");
 
-        double len = 5.0;
-        System.out.println("Площадь квадрата со стороной " + len + " равна " + area(len));
+        Square square = new Square(5);
+        System.out.println("Площадь квадрата со стороной " + square.len + " равна " + square.area());
 
-        double a = 5.0;
-        double b = 15.0;
-        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " равна " + area(a, b));
+        Rectangle rectangle = new Rectangle(5, 14);
+        System.out.println("Площадь прямоугольника со сторонами " + rectangle.a + " и " + rectangle.b + " равна " + rectangle.area());
+
+
+        Point a = new Point(5, 10);
+        Point b = new Point(10, 10);
+        System.out.println("Создана точка с координатами "+ a.x + " и " + a.y);
+
+        System.out.println("Создана точка с координатами "+ b.x + " и " + b.y);
+
+        Point z = new Point();
+        System.out.println("Создана точка с координатами "+ z.x + " и " + z.y);
+        a.distance(b);
+        a.distance(z);
+        b.distance(z);
+        b.distance(a);
 
     }
-
-    private static double area(double len) {
-        return len * len;
-    }
-
-    private static double area(double a, double b) {
-        return a * b;
-    }
-
 
 }
