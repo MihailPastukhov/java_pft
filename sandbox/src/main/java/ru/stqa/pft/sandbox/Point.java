@@ -32,9 +32,10 @@ public class Point {
 
     public double distance(Point a){
         double dist=0;
-        if (isEqual(a))
-            dist=0;
-
+        if (isEqual(a)) {
+            System.out.println("Расстояние между двумя точками = " + dist);
+            return dist;
+        }
         else{
             dist=Math.sqrt(Math.pow((this.x - a.x),2) + Math.pow((this.y - a.y),2));
             if (isZero(a)){
