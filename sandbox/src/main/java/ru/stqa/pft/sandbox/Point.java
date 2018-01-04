@@ -5,7 +5,7 @@ public class Point {
     public double x;
     public double y;
 
-    public Point(){
+    public Point() {
         this.x = 0;
         this.y = 0;
     }
@@ -16,36 +16,21 @@ public class Point {
 
     }
 
-    public boolean isEqual(Point a){
-        if ((this.x==a.x)&&(this.y==a.y)){
-            return true;
-        }
-        else return false;
+    public boolean isEqual(Point a) {
+        return (this.x == a.x) && (this.y == a.y);
     }
 
-    public boolean isZero(Point a){
-        if (((this.x==0)&&(this.y==0))||((a.x==0)&&(a.y==0))){
-            return true;
-        }
-        else return false;
-    }
+    public double distanceToPoint(Point a) {
+    /*Method counts distance between two points.
+    */
+        double dist = 0;
+        if (isEqual(a))
+            return dist;
 
-    public double distance(Point a){
-        double dist=0;
-        if (isEqual(a)) {
-            System.out.println("Расстояние между двумя точками = " + dist);
+        else {
+            dist = Math.sqrt(Math.pow((this.x - a.x), 2) + Math.pow((this.y - a.y), 2));
             return dist;
         }
-        else{
-            dist=Math.sqrt(Math.pow((this.x - a.x),2) + Math.pow((this.y - a.y),2));
-            if (isZero(a)){
-                System.out.println("Расстояние от начала координат до точки с координатами " + this.x + " и " + this.y + " = " + dist);
-            }
-            else {
-                System.out.println("Расстояние между двумя точками, введенными ранее = " + dist);
-            }
-        }
-        return dist;
     }
 
 }

@@ -12,21 +12,13 @@ public class MyFirstProgram {
         Rectangle rectangle = new Rectangle(5, 14);
         System.out.println("Площадь прямоугольника со сторонами " + rectangle.a + " и " + rectangle.b + " равна " + rectangle.area());
 
+        Point g = new Point(1, 1);
+        Point u = new Point();
+        System.out.println("Создана точка с координатами " + g.x + " и " + g.y);
+        Point f = new Point(5, 0);
+        System.out.println("Создана точка с координатами " + f.x + " и " + f.y);
 
-        Point a = new Point(5, 10);
-        Point b = new Point(10, 10);
-        Point c = new Point(10, 10);
-        System.out.println("Создана точка с координатами "+ a.x + " и " + a.y);
-
-        System.out.println("Создана точка с координатами "+ b.x + " и " + b.y);
-
-        Point z = new Point();
-        System.out.println("Создана точка с координатами "+ z.x + " и " + z.y);
-        a.distance(b);
-        a.distance(z);
-        b.distance(z);
-        b.distance(a);
-        b.distance(c);
+        System.out.println("Расстояние между двумя точками равно " + u.distanceToPoint(f));
 
     }
 
